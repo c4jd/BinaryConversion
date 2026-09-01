@@ -1,21 +1,21 @@
+from matplotlib import text
 
-Blist = []
+from flask import Flask, request, jsonify
 
-for i in range(256):
-    b = print(format(i, 'b'))
+app = Flask(__name__)
+
+@app.route('/convert', methods=['POST'])
+def convert_binary():
+    data = request.get_json()
+    binary = data.get('binary')
+    # Process the binary string and convert it to text
+    # ... (conversion logic here)
+    return jsonify({'text': text})
     Blist.append(b)
+    deci = int(b, 2)
+    Dlist.append(deci)
+    return jsonify({'binary': Blist, 'decimal': Dlist})
+app.run(debug=True)
 
 
-deci=[]
-for i in range(32,255):
-    deci.append(i)
 
-
-binary = (input("binary:")) 
-
-unit =binary.split()
-
-for b in unit:
-    decimal = int(b, 2)
-    character = chr(decimal)
-    print(character, end="")
