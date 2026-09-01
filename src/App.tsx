@@ -1,7 +1,7 @@
-import Title from "./page";
+import {Title, Body} from "./page";
 import { ConFrom, ConTo } from "./dropdown";
 import { Input, Output } from "./input";
-import { useState } from "react";
+
 
 function Button() {
   return (
@@ -18,32 +18,12 @@ function Button() {
   );
 }
 
-const [binary, setBinary] = useState("");
-async function handleConvert() {
-  try {
-    const response = await fetch("http://localhost:5173/convert", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ binary }),
-    });
-
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-
-    const data = await response.json();
-    setBinary(data.convertedValue);
-  } catch (error) {
-    console.error("Error during conversion:", error);
-  }
-}
 
 function App() {
   return (
     <div className="container">
       <Title />
+      <Body />
       <ConFrom />
       <Input />
       <Output />

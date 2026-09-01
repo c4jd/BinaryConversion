@@ -1,7 +1,6 @@
-import { useState } from "react";
+
 
 export function Input() {
-  const [binary, setBinary] = useState("");
 
   return (
     <div
@@ -15,17 +14,13 @@ export function Input() {
       <label className="form-label">Input:</label>
 
       <input 
-        type="text"
-        className="form-control"
-        value={binary}
-        onChange={(e) => setBinary(e.target.value)}
-      />
+        className="form-control">Binary</input>
     </div>
   );
 }
 
 export function Output() {
-  const [binary, setBinary] = useState("");
+;
 
   return (
     <div
