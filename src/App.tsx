@@ -1,6 +1,6 @@
 import Title from "./page";
 import { ConFrom, ConTo } from "./dropdown";
-import { Input } from "./input";
+import { Input, Output } from "./input";
 
 function Button() {
   return (
@@ -23,6 +23,7 @@ function App() {
       <Title />
       <ConFrom />
       <Input />
+      <Output />
       <ConTo />
       <Button />
     </div>

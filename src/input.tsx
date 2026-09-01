@@ -14,3 +14,19 @@ export function Input() {
     </div>
   );
 }
+
+export function Output() {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "300px",
+        right: "500px",
+        width: "300px",
+      }}
+    >
+      <label className="form-label">Output:</label>
+      <input type="text" className="form-control" />
+    </div>
+  );
+}
