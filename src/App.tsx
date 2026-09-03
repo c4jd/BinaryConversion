@@ -1,4 +1,4 @@
-import {Title, Body} from "./page";
+import {Title, Body } from "./page";
 import { ConFrom, ConTo } from "./dropdown";
 import { Input, Output } from "./input";
 

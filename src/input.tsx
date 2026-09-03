@@ -1,7 +1,4 @@
-
-
 export function Input() {
-
   return (
     <div
       style={{
@@ -13,15 +10,12 @@ export function Input() {
     >
       <label className="form-label">Input:</label>
 
-      <input 
-        className="form-control">Binary</input>
+      <input type="text" className="form-control" />
     </div>
   );
 }
 
 export function Output() {
-;
-
   return (
     <div
       style={{
@@ -32,7 +26,7 @@ export function Output() {
       }}
     >
       <label className="form-label">Output:</label>
-      <output className="form-control">value</output>
+      <input type="text" className="form-control" />
     </div>
   );
 }
